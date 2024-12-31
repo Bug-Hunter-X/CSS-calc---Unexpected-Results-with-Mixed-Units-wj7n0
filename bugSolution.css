@@ -1,0 +1,13 @@
+To fix this, ensure the percentage calculation is done first or rework your layout to avoid negative sizes.
+
+```css
+.element {
+  width: calc(50% - 100px);
+}
+```
+
+**Solutions:**
+
+* **Reorder operations:** If you need a minimal size, use `min()` or `max()` with `calc()`. Otherwise, rework your layout so negative sizes are avoided.
+
+* **Alternative approach:**  Instead of using `calc()`, consider using flexible box layout (Flexbox) or grid layout, which offer more robust and flexible methods for sizing and positioning elements.  This often leads to cleaner and more maintainable code.
