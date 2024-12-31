@@ -1,0 +1,9 @@
+The CSS `calc()` function can produce unexpected results if you mix different units (e.g., pixels and percentages) without careful consideration of the order of operations.  For example:
+
+```css
+.element {
+  width: calc(50% - 100px);
+}
+```
+
+If the parent element's width is less than 200px, this will result in a negative width, causing the element to disappear or behave unexpectedly. The subtraction occurs *before* the percentage is calculated.
